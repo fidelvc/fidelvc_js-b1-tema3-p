@@ -65,6 +65,14 @@
 
 			}
 		}
+
+		function createParagraph(texto) {
+			if(document.querySelector('.title')){
+				const newP = document.createElement('p');
+				newP.classList.add("paragraph");
+				newDiv.appendChild(newP);
+			}
+		}
 		
 	</script>
     <script defer id="test">
