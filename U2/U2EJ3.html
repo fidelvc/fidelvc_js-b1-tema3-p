@@ -62,18 +62,34 @@
 				newH1.textContent = texto;
 				newDiv.appendChild(newH1);
 				document.getElementById('myContent').appendChild(newDiv);
-
-			}
-		}
-
-		function createParagraph(texto) {
-			if(document.querySelector('.title')){
-				const newP = document.createElement('p');
-				newP.classList.add("paragraph");
-				newDiv.appendChild(newP);
 			}
 		}
 		
+		createTitle("Título creado desde el script");
+
+		function createParagraph(texto) {
+			if(document.querySelector('.title')){
+				const newParagraph = document.createElement('p');
+				newParagraph.classList.add("paragraph");
+				newParagraph.textContent = texto;
+				document.querySelector('.title').appendChild(newParagraph);
+			}
+		}
+		
+		createParagraph("Aquí el primer párrafo");
+		createParagraph("Párrafo 2");
+		createParagraph("Párrafo 3");
+		
+		
+		document.querySelector(".paragraph").remove();
+		document.querySelector(".title").children[2].remove()
+		
+
+
+
+
+
+
 	</script>
     <script defer id="test">
         /**
