@@ -46,8 +46,18 @@
       </svg>
     </div>
     <script defer id="solutionJS">
-        //Escribe aquí tu solución / escriviu aquí la vostra solució:
-          
+        //Escribe aquí tu solución / escriviu aquí la vostra solució:        
+        const c = document.getElementById("circle").addEventListener("mouseover", event => {
+          event.target.classList.replace("red", "green")
+        })
+        const r = document.getElementById("rect").addEventListener("mouseover", event => {
+          event.target.classList.replace("green", "orange")
+        })
+        const p = document.getElementById("polygon").addEventListener("mouseover", event => {
+          event.target.classList.replace("orange", "red")
+        })
+        
+        
 	</script>
     <script defer id="test">
         /**
