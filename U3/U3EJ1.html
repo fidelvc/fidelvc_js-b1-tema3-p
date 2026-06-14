@@ -47,15 +47,10 @@
     </div>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:        
-        const c = document.getElementById("circle").addEventListener("mouseover", event => {
-          event.target.classList.replace("red", "green")
-        })
-        const r = document.getElementById("rect").addEventListener("mouseover", event => {
-          event.target.classList.replace("green", "orange")
-        })
-        const p = document.getElementById("polygon").addEventListener("mouseover", event => {
-          event.target.classList.replace("orange", "red")
-        })
+        document.getElementById("circle").addEventListener("mouseover", e => e.target.classList.replace("red", "green"));
+        document.getElementById("rect").addEventListener("mouseover", e => e.target.classList.replace("green", "orange"));
+        document.getElementById("polygon").addEventListener("mouseover", e => e.target.classList.replace("orange", "red"));
+        
         
         
 	</script>
