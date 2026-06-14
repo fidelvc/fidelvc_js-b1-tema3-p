@@ -78,6 +78,15 @@
     </body>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+        function showClass(event) {
+            return document.getElementById('myContent').textContent = event.target.classList;
+        }
+        const div1 = document.getElementsByTagName('div')[1].addEventListener("click", showClass);
+        const div2 = document.getElementsByTagName('div')[2].addEventListener("click", showClass);
+        const div3 = document.getElementsByTagName('div')[3].addEventListener("click", showClass);
+
+
+
         
     </script>
     <script defer id="test">
