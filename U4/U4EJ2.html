@@ -69,6 +69,28 @@
         <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+        const armoredWindowsX = document.querySelector('#armored-windows');
+        const tintedWindowsX  = document.querySelector('#tinted-windows');
+        const sunroofX = document.querySelector('#sunroof');
+        
+        armoredWindowsX.addEventListener("change", () => {
+            sunroofX.checked = false;
+        })
+        tintedWindowsX.addEventListener("change", () => {
+            sunroofX.checked = false; 
+        })
+        sunroofX.addEventListener("change", () => {
+            armoredWindowsX.checked = false;
+            tintedWindowsX.checked = false;
+        })
+        
+        
+
+        //console.log([armoredWindowsX.checked, tintedWindowsX.checked, sunroofX.checked])
+        //console.log([armoredWindowsX.disabled, tintedWindowsX.disabled, sunroofX.disabled])
+
+
+
         </script>
         <script defer id="test">
             /**
