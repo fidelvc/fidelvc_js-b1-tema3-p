@@ -56,6 +56,7 @@
             <br><br>
 
             <label>Vehicle Extras:</label>
+            <br>
             <input type="checkbox" id="gps" name="extras" value="gps">
             <label for="gps">GPS</label>
             <br>
@@ -91,6 +92,25 @@
         
         // 1. Creamos un evento
         // 2. Dentro de ese evento evaluamos si el elemento observado ha sido checkeado. Si no, desactivamos submit.
+
+        function getChecked(elementID){
+            const x = document.querySelector(elementID);
+            return x.checked;
+        }
+
+        const submitButton = document.querySelector('#mySubmit');
+        const a = getChecked('#gps');
+        const b = getChecked('#leather-seats');
+        const c = getChecked('#sunroof');
+        const d = getChecked('#armored-windows');
+        const e = getChecked('#inted-windows');
+
+        console.log(a)
+
+        submitButton.addEventListener('click', (event) => {
+            
+            event.preventDefault()
+        })
 
 
     </script>
