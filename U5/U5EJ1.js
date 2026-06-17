@@ -25,6 +25,9 @@ localStorage.setItem(
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
+const myTriangles = localStorage.getItem(myTriangles);
+console.log(myTriangles)
+
 /**
  * TEST
  * The purpose of this code is purely for TESTING PURPOSES, 
