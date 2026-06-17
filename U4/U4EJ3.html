@@ -90,27 +90,34 @@
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
         
-        // 1. Creamos un evento
-        // 2. Dentro de ese evento evaluamos si el elemento observado ha sido checkeado. Si no, desactivamos submit.
+        // El formulario recoge los datos de los vehículos de un concesionario.
+        // Si se intent a
 
-        function getChecked(elementID){
-            const x = document.querySelector(elementID);
-            return x.checked;
-        }
 
         const submitButton = document.querySelector('#mySubmit');
-        const a = getChecked('#gps');
-        const b = getChecked('#leather-seats');
-        const c = getChecked('#sunroof');
-        const d = getChecked('#armored-windows');
-        const e = getChecked('#inted-windows');
+        
+        const gps = document.querySelector('#gps')
+        const leatherSeats = document.querySelector('#leather-seats').checked
+        const sunroof = document.querySelector('#sunroof').checked
+        const armoredWindows = document.querySelector('#armored-windows').checked
+        const tintedWindows = document.querySelector('#tinted-windows').checked
 
-        console.log(a)
+        submitButton.addEventListener('click', (e) => {
 
-        submitButton.addEventListener('click', (event) => {
+            if(!gps.checked || !leatherSeats.checked || !sunroof.checked || !armoredWindows.checked || !tintedWindows.checked){
+                e.preventDefault()
+                //e.target.disabled = true;
+                //...
+                document.getElementById('myContent').textContent = "You must select almost one extra"
+            }
             
-            event.preventDefault()
         })
+        gps.addEventListener('change', () => {
+            submitButton.disabled = !gps.checked;
+        })
+
+        // ... pero también observo que esto solo va a requerir más código
+        document.getElementById('gps').addEventListener('change', (e) => document.getElementById('myContent').textContent = "")
 
 
     </script>
