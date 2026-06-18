@@ -25,8 +25,9 @@ localStorage.setItem(
 
 //Escribe aquí tu solución / escriviu aquí la vostra solució:
 
-const myTriangles = localStorage.getItem(myTriangles);
-console.log(myTriangles)
+const myTriangles = JSON.parse(localStorage.getItem("myTriangles"));
+myTriangles.pop()
+localStorage.setItem("myTriangles", JSON.stringify(myTriangles))
 
 /**
  * TEST
