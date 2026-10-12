@@ -47,20 +47,26 @@
     </div>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+        document.body.style.backgroundColor = "#333";
 
-        const myCircle = document.getElementById('circle')
-        myCircle.addEventListener("mouseover", e => e.target.classList.replace(e.target.classList, myRect.classList));
-
-        const myRect = document.getElementById('rect');
-        myRect.addEventListener("mouseover", e => e.target.classList.replace(e.target.classList, myPolygon.classList));
-
-        const myPolygon = document.getElementById('polygon')
-        myPolygon.addEventListener("mouseover", e => e.target.classList.replace(e.target.classList, myCircle.classList));
-
+        const circle = document.getElementById('circle');
+        const rect = document.getElementById('rect');
+        const polygon = document.getElementById('polygon');
         
-        
-        //const mySVGnodes = document.getElementsByTagName('svg')[0].childNodes;
-        //mySVGnodes.forEach((element) => element.addEventListener('click', e => e.target.classList.replace(e.target.classList, "blue")))
+
+        circle.addEventListener('mouseover', e => {
+          e.target.classList.replace(e.target.classList, rect.classList)
+          console.log(e.target.className)
+        })
+        rect.addEventListener('mouseover', e => {
+          e.target.classList.replace(e.target.classList, polygon.classList)
+          console.log(rect.classList)
+        })
+        polygon.addEventListener('mouseover', e => {
+          e.target.classList.replace(e.target.classList, circle.classList)
+          console.log(e.target.classList)
+        })
+ 
         
 	</script>
     <script defer id="test">
